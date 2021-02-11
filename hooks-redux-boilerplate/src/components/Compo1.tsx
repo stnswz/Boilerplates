@@ -11,6 +11,7 @@ function Compo1() {
   const count: number = useSelector( (state: IRootState) => state.appState.currentCount);
   const dispatch: Function = useDispatch()
 
+  // https://reactjs.org/docs/hooks-effect.html
   useEffect(() => {
     console.log('Compo1 -> useEffect');
     dispatch(updateCount(count + 1));
